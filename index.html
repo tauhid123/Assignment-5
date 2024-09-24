@@ -80,6 +80,7 @@
                 
                 As a group of UK doctors, we have come together to raise funds to directly support the flood victims in Noakhali. Our mission is simple: to ensure that every penny raised goes directly to those in need, providing essential relief and helping them rebuild their lives.</p>
               <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full block font-light my-8" />
+              <p id="n-invalid" class="text-red-700 text-sm hidden">Invalid Money</p>
               <button class="btn w-full block bg-[#B4F461] text-lg font-bold">Donate Now</button>
             </div>
           </div>
@@ -128,8 +129,8 @@
                 Bangladesh is currently facing a devastating flood crisis, and the district of Noakhali has been hit particularly hard. Thousands of people have lost their homes, livelihoods, and all sense of security. Families are struggling to survive, with many left homeless, in debt, and without access to basic necessities.
                 
                 As a group of UK doctors, we have come together to raise funds to directly support the flood victims in Noakhali. Our mission is simple: to ensure that every penny raised goes directly to those in need, providing essential relief and helping them rebuild their lives.</p>
-              <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full block font-light my-8" />
-              <button class="btn w-full block bg-[#B4F461] text-lg font-bold">Donate Now</button>
+              <input id="donate-noakhali-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full block font-light my-8" />
+              <button id="donate-noakhali-btn" class="btn w-full block bg-[#B4F461] text-lg font-bold">Donate Now</button>
             </div>
           </div>
         </div>
@@ -137,11 +138,13 @@
 
       <!-- History -->
        <section>
-        <div class="w-4/5 m-auto">
+        <div id="history" class="w-4/5 m-auto">
 
         </div>
        </section>
     </main>
     <footer class="h-36 bg-[#F9F7F3]"></footer>
+    <script src="js/function.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
