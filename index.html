@@ -15,8 +15,8 @@
     </style>
 </head>
 <body style="font-family: Lexend;">
-    <header>
-      <div class="bg-[#F9F7F3]">
+    <header class="sticky top-0 bg-white bg-opacity-50 backdrop-blur-lg">
+      <div class="bg-[#F9F7F3] bg-opacity-50 backdrop-blur-lg">
         <nav class="w-4/5 m-auto">
             <div class="navbar">
                 <div class="navbar-start">
@@ -38,11 +38,12 @@
                     <ul
                       tabindex="0"
                       class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                      <li><a class="btn text-xl bg-[#B4F461]">Blog</a></li>
+                      
 
                     </ul>
                   </div>
-                  <a class="btn text-xl bg-[#B4F461] text-center items-center">Blog</a>
+                  <a id="blog-btn" class="btn text-xl bg-lime-400 text-center items-center" href="blog.html">Blog</a>
+                  <a id="home-btn" class="btn text-xl bg-lime-400 text-center items-center hidden">Home</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                   <ul class="menu menu-horizontal px-1 items-center">
@@ -52,17 +53,20 @@
                   </ul>
                 </div>
                 <div class="navbar-end">
-                  <img src="assets/coin.png" alt=""><a class="">5550 <span>BDT</span></a>
+                  <img src="assets/coin.png" alt=""><a> 
+                    <span id="main-balance">5550</span> 
+                    <span>BDT</span></a>
                 </div>
               </div>
         </nav>
       </div>
       <div class="nav-button-section text-center py-10">
-        <a href="" class="btn text-lg font-semibold mr-7">Donation</a><a href="" class="btn text-lg font-semibold">History</a>
+        <button id="donation-btn" href="" class=" text-lg font-semibold mr-7 py-3 px-5 bg-gray-200 rounded-lg">Donation</button>
+        <button id="history-btn" href="" class=" text-lg font-semibold py-3 px-5 bg-gray-200 rounded-lg">History</button>
       </div>
     </header>
 
-    <main class="my-24">
+    <main id="donate-page" class="my-24">
       <section>
         <div class="w-4/5 m-auto">
           <div class="grid lg:grid-cols-2 gap-12 p-8 border border-gray-300 rounded-2xl">
@@ -71,17 +75,33 @@
             </div>
             <div class="">
               <div class="navbar-end flex justify-start">
-                <img src="assets/coin.png" alt=""><a class="">5550 <span>BDT</span></a>
+                <img src="assets/coin.png" alt=""><a class=""><span id="donation-balance">5550</span> <span>BDT</span></a>
               </div>
-              <h2 class="text-xl font-bold my-7">Donate for Flood at Noakhali, Bangladesh</h2>
+              <h2 id="donate-title" class="text-xl font-bold my-7">Donate for Flood at Noakhali, Bangladesh</h2>
               <p class="text-base text-gray-500 font-light leading-9">Dear Friends and Supporters,
 
                 Bangladesh is currently facing a devastating flood crisis, and the district of Noakhali has been hit particularly hard. Thousands of people have lost their homes, livelihoods, and all sense of security. Families are struggling to survive, with many left homeless, in debt, and without access to basic necessities.
                 
                 As a group of UK doctors, we have come together to raise funds to directly support the flood victims in Noakhali. Our mission is simple: to ensure that every penny raised goes directly to those in need, providing essential relief and helping them rebuild their lives.</p>
-              <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full block font-light my-8" />
-              <p id="n-invalid" class="text-red-700 text-sm hidden">Invalid Money</p>
-              <button class="btn w-full block bg-[#B4F461] text-lg font-bold">Donate Now</button>
+              <input id="donate-noakahli-input" type="number" placeholder="Write Donation Amount" class="input input-bordered w-full block font-light my-8" />
+              <div class="text-center">
+                <button onclick="" id="donate-noakahli-btn" class="btn bg-[#B4F461] text-lg font-bold"  >Donate Now</button>
+              </div>
+                <!-- You can open the modal using ID.showModal() method -->
+                <dialog id="my_modal_4" class="modal">
+                  <div class="modal-box w-11/12 max-w-5xl text-center">
+                    <h3 class="text-4xl font-bold">Congrates!</h3>
+                    <div class="flex justify-center my-5"><img src="assets/coin.png" alt=""></div>
+                    <p class="py-4 text-gray-400">You Have Donated for Humankind</p>
+                    <p class="text-2xl font-bold">Successfully</p>
+                    <div class="modal-action">
+                      <form method="dialog">
+                        <!-- if there is a button, it will close the modal -->
+                        <div class="flex justify-center"><button class="btn">Close Confirmation</button></div>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
             </div>
           </div>
         </div>
@@ -97,16 +117,16 @@
             </div>
             <div class="">
               <div class="navbar-end flex justify-start">
-                <img src="assets/coin.png" alt=""><a class="">5550 <span>BDT</span></a>
+                <img src="assets/coin.png" alt=""><a class=""><span id="donation-balance2">1000</span> <span>BDT</span></a>
               </div>
-              <h2 class="text-xl font-bold my-7">Donate for Flood Relief in Feni, Bangladesh</h2>
+              <h2 id="donate-title2" class="text-xl font-bold my-7">Donate for Flood Relief in Feni, Bangladesh</h2>
               <p class="text-base text-gray-500 font-light leading-9">Dear Friends and Supporters,
 
                 Bangladesh is currently facing a devastating flood crisis, and the district of Noakhali has been hit particularly hard. Thousands of people have lost their homes, livelihoods, and all sense of security. Families are struggling to survive, with many left homeless, in debt, and without access to basic necessities.
                 
                 As a group of UK doctors, we have come together to raise funds to directly support the flood victims in Noakhali. Our mission is simple: to ensure that every penny raised goes directly to those in need, providing essential relief and helping them rebuild their lives.</p>
-              <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full block font-light my-8" />
-              <button class="btn w-full block bg-[#B4F461] text-lg font-bold">Donate Now</button>
+              <input id="donate-feni-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full block font-light my-8" />
+              <button id="donate-feni-btn" class="btn bg-lime-400 text-lg font-bold">Donate Now</button>
             </div>
           </div>
         </div>
@@ -121,28 +141,29 @@
             </div>
             <div class="">
               <div class="navbar-end flex justify-start">
-                <img src="assets/coin.png" alt=""><a class="">5550 <span>BDT</span></a>
+                <img src="assets/coin.png" alt=""><a class=""><span id="donation-balance3">3500</span> <span>BDT</span></a>
               </div>
-              <h2 class="text-xl font-bold my-7">Aid for Injured in the Quota Movement</h2>
+              <h2 id="donate-title3" class="text-xl font-bold my-7">Aid for Injured in the Quota Movement</h2>
               <p class="text-base text-gray-500 font-light leading-9">Dear Friends and Supporters,
 
                 Bangladesh is currently facing a devastating flood crisis, and the district of Noakhali has been hit particularly hard. Thousands of people have lost their homes, livelihoods, and all sense of security. Families are struggling to survive, with many left homeless, in debt, and without access to basic necessities.
                 
                 As a group of UK doctors, we have come together to raise funds to directly support the flood victims in Noakhali. Our mission is simple: to ensure that every penny raised goes directly to those in need, providing essential relief and helping them rebuild their lives.</p>
-              <input id="donate-noakhali-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full block font-light my-8" />
-              <button id="donate-noakhali-btn" class="btn w-full block bg-[#B4F461] text-lg font-bold">Donate Now</button>
+              <input id="donate-quota-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full block font-light my-8" />
+              <button id="donate-quota-btn" class="btn w-full block bg-[#B4F461] text-lg font-bold">Donate Now</button>
             </div>
           </div>
         </div>
       </section>
-
-      <!-- History -->
-       <section>
-        <div id="history" class="w-4/5 m-auto">
-
-        </div>
-       </section>
     </main>
+
+          <!-- History -->
+          <section>
+            <div id="history" class="w-4/5 m-auto hidden">
+    
+            </div>
+           </section>
+
     <footer class="h-36 bg-[#F9F7F3]"></footer>
     <script src="js/function.js"></script>
     <script src="js/index.js"></script>
